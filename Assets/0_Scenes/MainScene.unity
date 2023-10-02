@@ -432,7 +432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToTurnOffNormalMode:
-  - {fileID: 1080181906}
+  - {fileID: 462607200}
+  - {fileID: 140376936}
   objectsToTurnOffArMode:
   - {fileID: 354032864}
   - {fileID: 963194225}
