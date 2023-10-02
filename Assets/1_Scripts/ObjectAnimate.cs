@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockBehaviour : MonoBehaviour
+public interface ObjectAnimate 
 {
-   
-
+  
+    public abstract void Animate();
 }

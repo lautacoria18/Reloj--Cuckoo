@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PendolumBehaviour : MonoBehaviour
 {
@@ -11,13 +12,16 @@ public class PendolumBehaviour : MonoBehaviour
 
     private void Update()
     {
+        DateTime now = DateTime.Now;
+        string formattedSeconds = now.ToString("ss.ffffff");
 
-        string stringDate = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss,ffffff", CultureInfo.InvariantCulture);
-        string secondsDecimal = stringDate.Substring(stringDate.Length - 9);
-        float realSecondsFloat = float.Parse(secondsDecimal);
+        float secondsWithDecimals;
 
+        float.TryParse(formattedSeconds, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out secondsWithDecimals);
 
-        float angle = maxAngle * Mathf.Sin(realSecondsFloat * Mathf.PI);
+        float angle = maxAngle * Mathf.Sin(secondsWithDecimals * Mathf.PI);
         transform.localRotation = Quaternion.Euler(0, 0, angle);
+
+  
     }
 }
