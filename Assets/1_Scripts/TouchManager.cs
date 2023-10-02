@@ -13,6 +13,7 @@ public class TouchManager : MonoBehaviour
 
     private void Update()
     {
+        //Dependiendo que objeto toque, se llamara a la funcion de animar
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {
             
             RaycastHit hit;

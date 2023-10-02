@@ -11,21 +11,19 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        //Si esta en modo de realidad aumentada o viceversa, se prenden los objetos que necesito y se apagan los que no
         if (GameMode.instance.arMode)
         {
+            for (int i = 0; i < objectsToTurnOffNormalMode.Count; i++)
+            {
 
-
+                objectsToTurnOffNormalMode[i].SetActive(true);
+            }
             for (int i = 0; i < objectsToTurnOffArMode.Count; i++)
             {
                 objectsToTurnOffArMode[i].SetActive(false);
 
             }
-            for (int i = 0; i < objectsToTurnOffNormalMode.Count; i++)
-            {
-      
-                objectsToTurnOffNormalMode[i].SetActive(true);
-            }
-
         }
         else {
 

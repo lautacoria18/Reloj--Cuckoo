@@ -11,6 +11,7 @@ public class DoorBehaviour : MonoBehaviour, ObjectAnimate
     {
         animator = GetComponent<Animator>();
     }
+    //Si las puertas estan abiertas, se cerraran y si estan cerradas se abriran
     public void Animate()
     {
         animator.SetBool("Open", !animator.GetBool("Open"));

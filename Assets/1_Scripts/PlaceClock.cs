@@ -36,13 +36,7 @@ public class PlaceClock : MonoBehaviour
         EnhancedTouch.Touch.onFingerDown += FingerDown;
     }
 
-    private void OnDisable()
-    {
-        EnhancedTouch.TouchSimulation.Disable();
-        EnhancedTouch.EnhancedTouchSupport.Disable();
-        EnhancedTouch.Touch.onFingerDown -= FingerDown;
-    }
-
+    //La primera vez que se ejecute esta funcion instanciara el reloj donde el usuario toque en el plano detectado, a partir de la segunda vez el reloj sera cambiado de posicion donde toque el usuario
     void FingerDown(EnhancedTouch.Finger finger) {
 
         if (finger.index != 0) return;
@@ -56,27 +50,16 @@ public class PlaceClock : MonoBehaviour
                     Quaternion rotation = Quaternion.LookRotation(arCamera.transform.forward * -1);
 
 
-                    Pose pose = hit.pose;
                     if (GameObject.Find("Clock(Clone)"))
                     {
-
                         Clock.transform.position = position;
                         Clock.transform.rotation = rotation;
-
                     }
                     else
                     {
                         Clock = Instantiate(prefab, position, rotation);
-
-
-
-                    }
-                
-
+                    }           
             }
-
-
         }
-    
     }
 }

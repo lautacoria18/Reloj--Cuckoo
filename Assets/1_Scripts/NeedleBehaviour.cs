@@ -7,8 +7,8 @@ public class NeedleBehaviour : MonoBehaviour
 {
     public enum Type { Seconds, Minutes, Hours };
 
-    [SerializeField] Type valueType;
-    [SerializeField] private float min, max;
+    [SerializeField] Type valueType; 
+    [SerializeField] private float min, max; 
     Transform needle;
     float angMin = 0;
     float angMax = 360;
@@ -24,7 +24,7 @@ public class NeedleBehaviour : MonoBehaviour
         UpdateNeedle();
     }
 
-
+    //Esta funcion sirve para actualizar la rotacion de la aguja en base a la hora actual dentro de un rango de 360 graods dependiendo que tipo de aguja sea.
     private void UpdateNeedle()
     {
 

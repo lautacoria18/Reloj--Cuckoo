@@ -432,8 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToTurnOffNormalMode:
-  - {fileID: 462607200}
-  - {fileID: 140376936}
+  - {fileID: 1080181906}
   objectsToTurnOffArMode:
   - {fileID: 354032864}
   - {fileID: 963194225}
@@ -1235,7 +1234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1551060466
 RectTransform:
   m_ObjectHideFlags: 0
